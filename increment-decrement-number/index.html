@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>+-</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: rgb(217, 201, 232);
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .field1 span{
+            width: 100%;
+            text-align: center;
+            font-size: 55px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="field1">
+        <div class="plus">🔼</div>
+        <div class="num"> 01</div>   <!-- pointer-events : none -->
+        <div class="minus">🔽</div>
+    </div>
+
+
+    <script>
+        const plus = document.querySelector(".plus");
+        const number = document.querySelector(".num");
+        const minus = document.querySelector(".minus");
+
+        let a = 1;
+        
+        plus.addEventListener("click" , () => {
+            if(a < 12){
+                a++;
+                a = ( a < 10 ) ? "0"+ a : a;
+                number.innerText = a;
+            }
+        })
+
+        minus.addEventListener("click" , () => {
+            if(a > 1){
+                a--;
+                a = ( a < 10 ) ? "0"+ a : a;
+                number.innerText = a;
+            }
+        })
+    </script>
+</body>
+</html>
