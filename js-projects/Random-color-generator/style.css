@@ -1,0 +1,31 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+    margin: 10px;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.color-container{
+    background-color: orange;
+    display: flex;
+    width: 300px;
+    height: 150px;
+    color: wheat;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-shadow: 0px 2px 5px rgb(5, 4, 9);
+    border: 2px solid black;
+    border-radius: 15px;
+}
